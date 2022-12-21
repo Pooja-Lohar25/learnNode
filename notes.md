@@ -2,7 +2,7 @@
 Documentation : https://nodejs.org/en/docs/ 
 Server side js 
 Single threaded
-Asynchronous non blocking io model
+--- Asynchronous non blocking io model
 
 ## npm (node package manager) :
 just like pip in python
