@@ -1,7 +1,7 @@
 # Node js notes 
 Server side js 
 Single threaded
-Asynchronous non blocking io model
+--- Asynchronous non blocking io model
 
 ## Common js module :
 importing from another js file. 
