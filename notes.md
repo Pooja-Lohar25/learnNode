@@ -53,3 +53,11 @@ Functions to work with files (file handling)
     - it is standard for JavaScript and not default for node js
     - "type" : "module" needs to be specified to tell node js to use ES module else it does not recognises the keyword import
 
+## Event Loop in node js
+- node js continously run on event driven mechanism
+- it works on fifo principle and generates results for the events
+- if any event requiring i/o operation or taking too like connections to database this wouldn't stop the execution of further events queued up. Node js will handle this through call backs and will generate the result whenever they are ready. meanwhile it jumps to the next event/ request.
+
+## node js api development
+express is used for api development in node js
+morgan is a middleware that is used to keep log of requests and it gives information about the type of requests and the time taken. plus it helps in debugging as well.
