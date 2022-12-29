@@ -35,7 +35,7 @@ function (exports,require, module,__filename,__dirname){
 // actual module code
 }
 ## Globals:
-    Globals are variables which are accesible throughout the application. ex __dirname
+Globals are variables which are accesible throughout the application. ex __dirname
 
 ## os module:
 Gives various functions for operating system and its information
