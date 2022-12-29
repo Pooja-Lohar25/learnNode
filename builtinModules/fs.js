@@ -1,18 +1,9 @@
-const heyy = require("./sec")
-const os = require('os')
-const fs = require('fs')
-exp = {
-    nme: "pooja",
-    work : "swe"
-}
-//console.log(heyy("hii"))
-module.exports = exp
-//console.log(exports,require,__filename,__dirname)
-//os module methods
-//console.log(os.freemem()) //returns free memory available
-//console.log(os.uptime())
-// console.log(os.type())
-// console.log(os.networkInterfaces())
+const fs = require('fs');
+console.log(fs);
+// fs.mkdir("pooja",{recursive: true},(err) => {
+//     //
+// });
+
 
 //reading files
 // fs.readFile('file.txt','utf8',(err,data)=>{   //works asynchronously
@@ -37,5 +28,3 @@ fs.writeFileSync('file.txt','overwritten in file2')
 fs.readFile('file.txt','utf8',(err,data)=>{
     console.log(data)
 })
-
-console.log("content of index file")
