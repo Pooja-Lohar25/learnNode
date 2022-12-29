@@ -21,15 +21,16 @@ just like pip in python
 ## Common js module :
 importing from another js file. 
 Ex : importing an object mm from second.js to mdd.<br>
-##
-    Const mdd = require("./second"); <br> 
+```
+Const mdd = require("./second"); <br> 
+```
 Dot specifies same folder <br>
 'Second' is the file name 
 That has to be exported also.
 Syntax (in second.js file):
-##
-    module.exports = mm; // mm is name of the object in second.js
-
+```
+module.exports = mm; // mm is name of the object in second.js
+```
 ## Module wrapper function:
 whenever a module is created nodejs wraps it in  function
 function (exports,require, module,__filename,__dirname){
@@ -48,15 +49,17 @@ Functions to work with files (file handling)
 - Common js :
     - uses require() to import modules  
     - Syntax :
-    ##
-        const someMod = require("./modulename");
+    ```
+    const someMod = require("./modulename");
+    ```
     - it is default for nodejs (also better to use in backend)
     - no need of explicitly specifying the "type" : "module" in package.json as by default common js is considered
 - ES module :
     - uses import keyword
     - Syntax : 
-    ##
-        import * from "./modulename" ; or import {entity1,entity2,....} from "./modulename";
+    ```
+    import * from "./modulename" ; or import {entity1,entity2,....} from "./modulename";
+    ```
     - it is standard for JavaScript and not default for node js
     - "type" : "module" needs to be specified to tell node js to use ES module else it does not recognises the keyword import
 
