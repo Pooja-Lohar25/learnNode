@@ -29,16 +29,18 @@ The has to be exported also.
 Syntax (in second.js file) 
 module.exports = mm; // mm is name of the object in second.js
 
-## module wrapper function:
+## Module wrapper function:
 whenever a module is created nodejs wraps it in  function
 function (exports,require, module,__filename,__dirname){
 // actual module code
 }
+## Globals:
+    Globals are variables which are accesible throughout the application. ex __dirname
 
 ## os module:
 Gives various functions for operating system and its information
 
-## file system
+## fs module (file system) : 
 Functions to work with files (file handling)
 
 ## Common JS Modules vs ES Modules (ECMA Script modules)
