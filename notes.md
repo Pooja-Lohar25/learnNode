@@ -71,3 +71,28 @@ Functions to work with files (file handling)
 ## node js api development
 express is used for api development in node js
 morgan is a middleware that is used to keep log of requests and it gives information about the type of requests and the time taken. plus it helps in debugging as well.
+
+## Nodemon 
+Nodemon is npm package which constantly keeps track of any changes on the server and reloads them without us manually restarting it. <br>
+
+### Setting up nodemon
+- Install nodemon
+    ```node
+    node install nodemon
+    ```
+- set the "start" and "dev" property of "scripts" in package.json created at the time of node init
+    ```node
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node app.js", 
+    "dev" : "nodemon app.js" //keep in mind the correct filelocation
+    }
+    ```
+- On starting the server <br>
+    npm run command_name <br>
+    ```node
+    npm run dev 
+    ```
+
+Now the server will continue to run also reloads in case of any updates on the server. <br>
+app.js is the file that is loaded everytime.
