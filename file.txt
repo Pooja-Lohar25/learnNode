@@ -1,1 +1,1 @@
-overwritten in file2
+The new text is I am the text from file.txt , I am text from sec.txt
