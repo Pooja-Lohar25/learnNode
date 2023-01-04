@@ -100,9 +100,10 @@ app.js is the file that is loaded everytime.
 ### Promises, Async and Await
 Promise is a kind of event that will either be resolved or rejected. It is a cleaner way of writing asynchrous style of functions.<br>
 Just like try and catch, promises use .then() and .catch() methods.<br>
-    - .then() : defines what to do if the promise is resolved. We can have chain of .then() methods.<br>
+- .then() : defines what to do if the promise is resolved. We can have chain of .then() methods.<br>
         whatever is returned by one then() methods it will be passed on to the next one.
-    - .catch() : defines what to do if the promise is rejected. 
+- .catch() : defines what to do if the promise is rejected. <br>
+    
 <b>async</b> keyword is used in functions definitions where the function is an asynchronous type of function.<br> 
 <b>await</b> keyword is used inside the async function which tells the code will take sometime and so it must wait for results. <br>
 await cannot be used without async<br>
