@@ -97,7 +97,7 @@ Nodemon is npm package which constantly keeps track of any changes on the server
 Now the server will continue to run also reloads in case of any updates on the server. <br>
 app.js is the file that is loaded everytime.
 
-### Promises, Async and Await
+## Promises, Async and Await
 Promise is a kind of event that will either be resolved or rejected. It is a cleaner way of writing asynchrous style of functions.<br>
 Just like try and catch, promises use .then() and .catch() methods.<br>
 - .then() : defines what to do if the promise is resolved. We can have chain of .then() methods.<br>
@@ -109,7 +109,7 @@ Just like try and catch, promises use .then() and .catch() methods.<br>
 await cannot be used without async<br>
 async/await are used for writing asynchronous codes that feel like synchronous. 
 
-### Events
+## Events
 Events are actions on a computer. reading writing to file or connection etc. We can also create our own events.<br>
 <b>Package : events </b><br>
 To use the package we need to create an object. 
@@ -124,7 +124,7 @@ Syntax :
 const customeEmitter = new EventEmitter()
 ```
 
-#### Methods :
+### Methods :
 - emit() : triggers the event
 - on() : adds a callback to the event when it is triggered.
         we can add as many callbacks we want to add to the event and all the listeners/callbacks would be excuted when event is trigerred. <br>
