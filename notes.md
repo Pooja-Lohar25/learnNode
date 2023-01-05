@@ -108,3 +108,31 @@ Just like try and catch, promises use .then() and .catch() methods.<br>
 <b>await</b> keyword is used inside the async function which tells that the code will take some time and so it must wait for the results. <br>
 await cannot be used without async<br>
 async/await are used for writing asynchronous codes that feel like synchronous. 
+
+### Events
+Events are actions on a computer. reading writing to file or connection etc. We can also create our own events.<br>
+<b>Package : events </b><br>
+To use the package we need to create an object. 
+syntax: 
+```node
+const EventEmitter = require('events')
+```
+<b>EventEmitter : </b> A class whose object will be used for event handling.<br> <br>
+EventEmitter is not a keyword <br>
+Syntax :
+```node
+const customeEmitter = new EventEmitter()
+```
+
+#### Methods :
+- emit() : triggers the event
+- on() : adds a callback to the event when it is triggered.
+        we can add as many callbacks we want to add to the event and all the listeners/callbacks would be excuted when event is trigerred. <br>
+        All the callbacks are added with on() methods separately. <br>
+        Syntax : 
+        ```node 
+        customEmitter.on('event1',()=>{  //callback1  })
+        customEmitter.on('event1',()=>{  //callback2  })
+        ```
+- once() : callback (listener) will be added only once when event is triggered... and time when event is triggered   again the listener is ignored
+
