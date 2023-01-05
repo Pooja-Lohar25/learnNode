@@ -129,10 +129,10 @@ const customeEmitter = new EventEmitter()
 - on() : adds a callback to the event when it is triggered.
         we can add as many callbacks we want to add to the event and all the listeners/callbacks would be excuted when event is trigerred. <br>
         All the callbacks are added with on() methods separately. <br>
-        Syntax : 
-        ```node 
+        Syntax : <br>
+    ```node 
         customEmitter.on('event1',()=>{  //callback1  })
         customEmitter.on('event1',()=>{  //callback2  })
-        ```
+    ```
 - once() : callback (listener) will be added only once when event is triggered... and time when event is triggered   again the listener is ignored
 
