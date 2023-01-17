@@ -136,3 +136,18 @@ const customeEmitter = new EventEmitter()
     ```
 - once() : callback (listener) will be added only once when event is triggered... and time when event is triggered   again the listener is ignored
 
+## Express
+- Node js framework for api development. <br>
+- Makes resource fetching easier.<br>
+- while rendering a web page all the links that are mentioned into the webpage (css/js/imgs..etc) need to be handled in if statements separately just like '/about' , '/contacts' are managed. (refer handlingReq.js file) <br> <br>
+
+Since we are not rendering the webpages or calling them rather the server is reading them and any link encountered in the webpage will be called by the server. The server then checks the link if it is handled in callback or not if not it mentions as resource not found. <br>
+
+* all the resources be it img, css file, or js need to be specified separately.
+
+* before this they must also be read by readFileSync() method and contents to be stored in a variable
+
+* while reading a webpage when a path of, for ex an image, is read, the server calls the url as 'localhost/logoimg.svg'
+ 
+* if the server won't find this url in any of the 'if' statements it won't display the image. Same goes with other resources as well.
+* <b> Express  makes all of this easier. </b>
