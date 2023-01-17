@@ -69,7 +69,7 @@ Functions to work with files (file handling)
 - if any event requiring i/o operation or taking too like connections to database this wouldn't stop the execution of further events queued up. Node js will handle this through call backs and will generate the result whenever they are ready. meanwhile it jumps to the next event/ request.
 
 ## node js api development
-express is used for api development in node js
+<b>express</b> is used for api development in node js <br>
 morgan is a middleware that is used to keep log of requests and it gives information about the type of requests and the time taken. plus it helps in debugging as well.
 
 ## Nodemon 
