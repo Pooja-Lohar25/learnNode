@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express() //server instance
-
+const path = require('path')
 //methods
 
 /**
@@ -12,17 +12,21 @@ const app = express() //server instance
  * app.listen 
  * app.all -- covers all operations
  */ 
+app.use(express.static(path.resolve(__dirname,'public')))
 
-app.get('/',(req,res)=>{
-    res.status(200).send('<h1>Home page</h1>')
+// app.get('/',(req,res)=>{
+//     res.sendFile(path.resolve(__dirname,'./login.html'),(err)=>{
+//         if(err) console.log(err)
+//     })
+// })
+
+
+app.get('/newComplaint',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./public/newcomplaint.html'),(err)=>{
+        if(err) console.log(err)
+    })
 })
 
-app.get('/about',(req,res)=>{
-    res.status(200).send('<h1>about page</h1>')
-})
-app.get('/contact/sam',(req,res)=>{
-    res.status(200).send('<h1>yeah! sam is here</h1>')
-})
 
 app.all('*',(req,res)=>{
     res.status(404).send('<h1> resource not found </h1>')
