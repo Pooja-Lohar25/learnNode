@@ -151,3 +151,18 @@ Since we are not rendering the webpages or calling them rather the server is rea
  
 * if the server won't find this url in any of the 'if' statements it won't display the image. Same goes with other resources as well.
 * <b> Express  makes all of this easier. </b>
+
+### Sending files using express
+All the static files like html,css, js, and imgs (all frontend files) should be stored in a separate folder say 'public' (name can be of your choice) <br>
+
+```node
+app.use(express.static(path.resolve(__dirname,'public')))
+/* app -> server instance 
+use() -> method which calls the middleware
+middleware is something which runs when the user  requests some resource and before giving the response the middleware would be invoked
+express.static is the middleware that is called
+it takes path of the static folder where all the files, img etc are stored
+*/
+```
+
+To render the index page of website it must contain a file named as index which will be automatically called when the middleware goes to 'public' folder
