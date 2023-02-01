@@ -166,3 +166,31 @@ it takes path of the static folder where all the files, img etc are stored
 ```
 
 To render the index page of website it must contain a file named as index which will be automatically called when the middleware goes to 'public' folder
+
+### Middlewares in express
+Middlewares are kind of functionalities that run before the get or post request is made  to the server. <br>
+There can be builtin middlewares or userdefined. Express is almost a bunch of numerous middlewares.<br>
+Express allows middlewares to access both request and response objects without needing the developer to pass them explicitly to the middleware. 
+
+After express calls the middleware it also has to be passed with the next middleware with should be called after completion of the current one. <br>
+
+For this it uses 
+```node
+next() 
+```
+<p>creating user defined middleware : logger<p>
+```node
+logger = (req,res,next)=>{
+    const url = req.url
+    const method = req.method
+    const time = new Date().getTime() 
+    console.log(url,method,time)   
+    next()
+}
+```
+<p>use this logger for a specific route<p>
+```node
+app.get('/item',logger,(req,res)=>{ //logger is not called but referenced
+    res.send("items")
+})
+```
