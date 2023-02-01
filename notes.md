@@ -178,9 +178,10 @@ For this it uses
 ```node
 next() 
 ```
-<p>creating user defined middleware : logger<p>
+<p>creating user defined middleware : logger</p>
+                                               
 ```node
-logger = (req,res,next)=>{
+logger = (req,res,next) => {
     const url = req.url
     const method = req.method
     const time = new Date().getTime() 
@@ -188,9 +189,21 @@ logger = (req,res,next)=>{
     next()
 }
 ```
-<p>use this logger for a specific route<p>
+<p>use this logger for a specific route</p>
+    
 ```node
 app.get('/item',logger,(req,res)=>{ //logger is not called but referenced
     res.send("items")
 })
+```
+    
+<p> using logger with all the requests </p>
+    
+```node
+app.use(logger)
+```
+<p>using multiple middlewares</p>
+    
+```node
+app.use([middleware1,middleware2,....so on]) //middlewares will be called in sequence
 ```
