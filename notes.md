@@ -78,7 +78,7 @@ Nodemon is npm package which constantly keeps track of any changes on the server
 ### Setting up nodemon
 - Install nodemon
     ```node
-    node install nodemon
+    npm install nodemon
     ```
 - set the "start" and "dev" property of "scripts" in package.json created at the time of node init
     ```node
